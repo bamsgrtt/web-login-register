@@ -3,7 +3,7 @@
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
-$db_name = "pesbuk";
+$db_name = "db_login";
 
 try {
     //create PDO connection
