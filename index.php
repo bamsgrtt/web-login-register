@@ -90,8 +90,8 @@ body {
 <!-- NAVBAR -->
 <nav class="navbar shadow-sm">
     <div class="container">
-        <span class="navbar-brand fw-bold text-primary fs-4">
-            <i class="bi bi-people-fill"></i> Pesbuk
+        <span class="navbar-brand fw-bold text-primary fs-4 ">
+         PESBUK
         </span>
 
         <div class="d-flex gap-2">
@@ -183,8 +183,14 @@ body {
 </section>
 
 <!-- FOOTER -->
-<footer class="text-center py-4 text-muted">
-    <i class="bi bi-code-slash"></i> © 2026 Pesbuk — Dibuat dengan semangat ngoding
+<footer class="py-4 mt-5 border-top bg-white">
+    <div class="container text-center">
+        <span class="fw-bold text-primary fs-5">PESBUK</span>
+        <p class="text-muted small mt-2 mb-0">
+            &copy; <?php echo date("Y"); ?> Pesbuk Indonesia. <br>
+            Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> untuk koneksi yang lebih baik.
+        </p>
+    </div>
 </footer>
 
 </body>

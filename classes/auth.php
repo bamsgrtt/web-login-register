@@ -1,12 +1,14 @@
 <?php
+
+require_once 'Session.php';
+
 class Auth {
     private $conn;
+    private $session;
 
     public function __construct($db) {
         $this->conn = $db;
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
+        $this->session = new Session();
     }
 
     public function register($username, $email, $password) {
@@ -30,7 +32,7 @@ class Auth {
 
             if ($user && password_verify($password, $user['password'])) {
                 session_regenerate_id(true);
-                $_SESSION['user'] = $user;
+                $this->session->set('user', $user);
                 return true;
             }
         }

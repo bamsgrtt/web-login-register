@@ -8,6 +8,13 @@ class Session {
     public function set($key, $value) { 
         $_SESSION[$key] = $value; 
         }
+
+    public function remove($key) {
+        return $_SESSION[$key] ?? null;
+    }
+    public function regenerate() {
+        session_regenerate_id(true);
+    }
     public function get($key) { 
         return $_SESSION[$key] ?? null; 
         }

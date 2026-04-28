@@ -88,7 +88,13 @@ body {
             <p class="text-muted mb-4">Masuk ke akun Pesbuk kamu</p>
 
             <form method="POST">
-
+                <?php if (isset($error)): ?>
+        <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            <?= $error ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
                 <!-- EMAIL -->
                 <div class="mb-3">
                     <label class="form-label small text-muted">Email</label>
