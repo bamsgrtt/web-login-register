@@ -1,5 +1,5 @@
 <?php
-require_once '../config/database.php';
+require_once '../config/Database.php';
 require_once '../classes/auth.php';
 
 $db = new Database();
@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'] ?? '';
 
     if ($auth->register($username, $email, $password)) {
-        header("Location: login.php");
+        header("Location: ../index.php");
         exit;
     } else {
         $message = "Registrasi gagal, mungkin email atau username sudah terdaftar.";
@@ -138,7 +138,7 @@ body {
 
             <p class="text-center mt-4 small text-muted">
                 Sudah punya akun? 
-                <a href="login.php" class="fw-semibold text-decoration-none">Login</a>
+                <a href="../index.php" class="fw-semibold text-decoration-none">Login</a>
             </p>
 
         </div>
